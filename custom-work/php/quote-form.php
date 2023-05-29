@@ -8,8 +8,7 @@ use PHPMailer\PHPMailer\Exception;
 // Check if form data is submitted
 if (isset($_POST) && !empty($_POST)) {
     
-    // Sent_Mail_User();
-    // die;
+    
 
     extract($_POST);
     $data =  array();

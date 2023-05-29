@@ -95,7 +95,7 @@ if (isset($_POST) && !empty($_POST)) {
             echo json_encode($data);
             die;
         }
-        if (!Sent_Mail_User()) {
+        if (!Send_an_Email()) {
             $data = array('code' => "error", 'message' => "Something wrong with Email");
             echo json_encode($data);
             die;
@@ -250,13 +250,13 @@ function Create_Word_Document($data = array(), $quote_data = array(), $image1Pat
         return true;
     } catch (\PhpOffice\PhpWord\Exception\Exception $e) {
         echo "Error saving the file: " . $e->getMessage();
-        die;
+        return false;
     }
 }
 
 
  
-function Sent_Mail_User()
+function Send_an_Email()
 {
     // Instantiate PHPMailer
     $mail = new PHPMailer(true);
