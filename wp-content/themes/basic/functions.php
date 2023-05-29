@@ -266,9 +266,7 @@ function custom_work_script()
 					$('#forminator-module-7').submit(function(event) {
 						event.preventDefault();
 						event.stopPropagation();
-						$('.forminator-button.forminator-button-submit').prop('disabled', true);
-						$('.forminator-button.forminator-button-submit').text('Loading...');
-						///Create Url for website
+					 	///Create Url for website
 						var baseUrl = "https://harryclarktemplate.webxolutions.com/";
 						let ajaxurl = baseUrl + "custom-work/php/quote-form.php";
 
@@ -277,7 +275,8 @@ function custom_work_script()
 						// Validate form fields
 						let isValid = validateForm();
 						if (isValid == true) {
-
+							$('.forminator-button.forminator-button-submit').prop('disabled', true);
+							$('.forminator-button.forminator-button-submit').text('Loading...');
 							///remove cookies previous
 							Cookies.remove("user_name");
 							Cookies.remove("quote_id");
@@ -377,8 +376,7 @@ function custom_work_script()
 						event.preventDefault();
 						event.stopPropagation();
 
-						$('.forminator-button.forminator-button-submit').prop('disabled', true);
-						$('.forminator-button.forminator-button-submit').text('Loading...');
+
 
 						///Create Url for website
 						var baseUrl = "https://harryclarktemplate.webxolutions.com/";
@@ -393,6 +391,8 @@ function custom_work_script()
 
 
 						if (isValid == true) {
+							$('.forminator-button.forminator-button-submit').prop('disabled', true);
+							$('.forminator-button.forminator-button-submit').text('Loading...');
 							$.ajax({
 								url: ajaxurl,
 								type: 'POST',
