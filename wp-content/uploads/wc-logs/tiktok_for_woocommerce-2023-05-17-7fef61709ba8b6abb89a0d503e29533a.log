@@ -1,0 +1,58 @@
+2023-05-17T07:36:04+00:00 DEBUG Tt4b_Pixel_Class::inject_start_checkout: hit injectStartCheckout
+2023-05-17T07:36:04+00:00 DEBUG Tt4b_Pixel_Class::inject_start_checkout: Missing option "access_token"
+2023-05-17T09:44:06+00:00 DEBUG POST: https://business-api.tiktok.com/open_api/v1.2/tbp/business_profile/disconnect/
+
+{"external_business_id":false,"business_platform":"WOO_COMMERCE","is_setup_page":0,"app_id":false}
+ ajax: no
+2023-05-17T09:44:06+00:00 DEBUG Tt4b_Mapi_Class::mapi_post: Response: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Content-Type: application/json; charset=utf-8
+Content-Length: 103
+X-Api-Deprecation-Info: API for Business Version 1.3 is now live. To avoid disruption to your business, we recommend you migrate all calls to v1.3 as soon as possible. Please visit our migration guide for more details: https://ads.tiktok.com/marketing_api/docs?id=1740029169927169
+X-Domain-Change-Info: We have moved to the new domain business-api.tiktok.com for API services after the Platform Upgrade on 09/30/2021. Please update all of your requests with the new domain if you haven't done so already. For more information, please visit https://ads.tiktok.com/marketing_api/docs?rid=esb88xalm6m&id=1709207085043713
+X-Tt-Logid: 202305170944077814BC4B7A575400BCA0
+Server-Timing: inner; dur=6
+x-tt-trace-host: 01f439317fcb0e5181532793f3e486b80dcb417052c840ffcdc12434fcaf4b560f0462b3fdf7b9819410ace55c12d8ee651850857a7ccf8168d6419225747d1ef0c5d18db95be1c3c6de92fba6a9b32219fc4cf698969883a5dfa846ccfeb580b0
+Expires: Wed, 17 May 2023 09:44:08 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Wed, 17 May 2023 09:44:08 GMT
+X-Cache: TCP_MISS from a23-47-190-189.deploy.akamaitechnologies.com (AkamaiGHost/11.0.4.1-48141169) (-)
+Connection: close
+x-tt-trace-tag: id=16;cdn-cache=miss;type=dyn
+Server-Timing: cdn-cache; desc=MISS, edge; dur=4, origin; dur=8
+X-Origin-Response-Time: 9,23.47.190.189
+X-Akamai-Request-ID: 1f71e124
+
+{"code":40104,"message":"The access_token is empty.","request_id":"202305170944077814BC4B7A575400BCA0"}
+
+2023-05-17T09:44:06+00:00 DEBUG POST: https://business-api.tiktok.com/tbp/v2.0/shop/connection/disconnect?external_data=
+
+--- EMPTY STRING ---
+ ajax: no
+2023-05-17T09:44:07+00:00 DEBUG Tt4b_Mapi_Class::tts_shop_disconnect: Response: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Content-Type: application/json; charset=utf-8
+Content-Length: 95
+X-Api-Deprecation-Info: API for Business Version 1.3 is now live. To avoid disruption to your business, we recommend you migrate all calls to v1.3 as soon as possible. Please visit our migration guide for more details: https://ads.tiktok.com/marketing_api/docs?id=1740029169927169
+X-Domain-Change-Info: We have moved to the new domain business-api.tiktok.com for API services after the Platform Upgrade on 09/30/2021. Please update all of your requests with the new domain if you haven't done so already. For more information, please visit https://ads.tiktok.com/marketing_api/docs?rid=esb88xalm6m&id=1709207085043713
+X-Tt-Logid: 202305170944087814BC4B7A575400BCA6
+Server-Timing: inner; dur=9
+x-tt-trace-host: 01f439317fcb0e5181532793f3e486b80dcb417052c840ffcdc12434fcaf4b560f0462b3fdf7b9819410ace55c12d8ee651850857a7ccf8168d6419225747d1ef0d6a5f70fb796f85a07c305ea5c05bf5c8370508483688cdbde62d7c47cbe57ce
+Expires: Wed, 17 May 2023 09:44:08 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Wed, 17 May 2023 09:44:08 GMT
+X-Cache: TCP_MISS from a23-47-190-189.deploy.akamaitechnologies.com (AkamaiGHost/11.0.4.1-48141169) (-)
+Connection: close
+x-tt-trace-tag: id=16;cdn-cache=miss;type=dyn
+Server-Timing: cdn-cache; desc=MISS, edge; dur=3, origin; dur=12
+X-Origin-Response-Time: 12,23.47.190.189
+X-Akamai-Request-ID: 1f71e656
+
+{"code":40001,"message":"Permission denied.","request_id":"202305170944087814BC4B7A575400BCA6"}
+

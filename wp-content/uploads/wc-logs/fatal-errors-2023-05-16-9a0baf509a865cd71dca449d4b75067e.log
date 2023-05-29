@@ -1,0 +1,15 @@
+2023-05-16T17:19:37+00:00 CRITICAL Uncaught TypeError: WC_Stripe_API::get_payment_method(): Argument #1 ($payment_method_id) must be of type string, null given, called in C:\xampp\htdocs\codeanddesign\wp-content\plugins\woocommerce-gateway-stripe\includes\class-wc-stripe-customer.php on line 300 and defined in C:\xampp\htdocs\codeanddesign\wp-content\plugins\woocommerce-gateway-stripe\includes\class-wc-stripe-api.php:284
+Stack trace:
+#0 C:\xampp\htdocs\codeanddesign\wp-content\plugins\woocommerce-gateway-stripe\includes\class-wc-stripe-customer.php(300): WC_Stripe_API::get_payment_method(NULL)
+#1 C:\xampp\htdocs\codeanddesign\wp-content\plugins\woocommerce-gateway-stripe\includes\abstracts\abstract-wc-stripe-payment-gateway.php(1178): WC_Stripe_Customer->add_source(NULL)
+#2 C:\xampp\htdocs\codeanddesign\wp-content\plugins\woocommerce\includes\class-wc-form-handler.php(527): WC_Stripe_Payment_Gateway->add_payment_method()
+#3 C:\xampp\htdocs\codeanddesign\wp-includes\class-wp-hook.php(308): WC_Form_Handler::add_payment_method_action(Object(WP))
+#4 C:\xampp\htdocs\codeanddesign\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#5 C:\xampp\htdocs\codeanddesign\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\codeanddesign\wp-includes\class-wp.php(797): do_action_ref_array('wp', Array)
+#7 C:\xampp\htdocs\codeanddesign\wp-includes\functions.php(1334): WP->main('')
+#8 C:\xampp\htdocs\codeanddesign\wp-blog-header.php(16): wp()
+#9 C:\xampp\htdocs\codeanddesign\index.php(17): require('C:\\xampp\\htdocs...')
+#10 {main}
+  thrown in C:\xampp\htdocs\codeanddesign\wp-content\plugins\woocommerce-gateway-stripe\includes\class-wc-stripe-api.php on line 284
+

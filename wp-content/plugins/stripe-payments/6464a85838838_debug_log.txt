@@ -1,0 +1,126 @@
+[05/17/2023 10:11:36 AM] - handle_create_pi() -  Product ID: 60, Captcha Type: , Txn Counter: 0, IP: ::1
+[05/17/2023 10:11:36 AM] - Page load signature check done!
+[05/17/2023 10:11:36 AM] - Request usage count is valid for this IP addresss. IP: ::1, Request Count: 1
+[05/17/2023 10:11:39 AM] - handle_confirm_pi() -  Product ID: 60, Captcha Type: , Txn Counter: 0, IP: ::1
+[05/17/2023 10:11:39 AM] - Page load signature check done!
+[05/17/2023 10:11:39 AM] - Request usage count is valid for this IP addresss. IP: ::1, Request Count: 2
+[05/17/2023 10:11:43 AM] - Payment processing started.
+[05/17/2023 10:11:43 AM] - Got product ID: 60
+[05/17/2023 10:11:43 AM] - Firing asp_ng_process_ipn_product_item_override filter.
+[05/17/2023 10:11:43 AM] - Firing asp_ng_process_ipn_payment_data_item_override filter.
+[05/17/2023 10:11:44 AM] - The transaction ID of this notification is: ch_3N8hKZFs2jhMsQY11SsFe6QZ
+[05/17/2023 10:11:44 AM] - Constructing checkout result and order data.
+[05/17/2023 10:11:44 AM] - Firing asp_ng_payment_completed filter.
+[05/17/2023 10:11:44 AM] - Firing asp_ng_payment_completed_update_pi filter.
+[05/17/2023 10:11:44 AM] - Firing asp_stripe_payment_completed action.
+[05/17/2023 10:11:44 AM] - Payment has been processed successfully.
+[05/17/2023 10:11:44 AM] - Redirecting to results page "http://localhost/codeanddesign/contact-us/"
+
+[05/17/2023 10:13:47 AM] - handle_create_pi() -  Product ID: 60, Captcha Type: , Txn Counter: 1, IP: ::1
+[05/17/2023 10:13:47 AM] - Page load signature check done!
+[05/17/2023 10:13:47 AM] - Request usage count is valid for this IP addresss. IP: ::1, Request Count: 3
+[05/17/2023 10:13:50 AM] - handle_confirm_pi() -  Product ID: 60, Captcha Type: , Txn Counter: 1, IP: ::1
+[05/17/2023 10:13:50 AM] - Page load signature check done!
+[05/17/2023 10:13:50 AM] - Request usage count is valid for this IP addresss. IP: ::1, Request Count: 4
+[05/17/2023 10:13:54 AM] - Payment processing started.
+[05/17/2023 10:13:54 AM] - Got product ID: 60
+[05/17/2023 10:13:54 AM] - Firing asp_ng_process_ipn_product_item_override filter.
+[05/17/2023 10:13:54 AM] - Firing asp_ng_process_ipn_payment_data_item_override filter.
+[05/17/2023 10:13:55 AM] - The transaction ID of this notification is: ch_3N8hMgFs2jhMsQY103VU021F
+[05/17/2023 10:13:55 AM] - Constructing checkout result and order data.
+[05/17/2023 10:13:55 AM] - Firing asp_ng_payment_completed filter.
+[05/17/2023 10:13:55 AM] - Firing asp_ng_payment_completed_update_pi filter.
+[05/17/2023 10:13:55 AM] - Firing asp_stripe_payment_completed action.
+[05/17/2023 10:13:55 AM] - Payment has been processed successfully.
+[05/17/2023 10:13:55 AM] - Redirecting to results page "http://localhost/codeanddesign/contact-us/"
+
+[05/17/2023 10:14:41 AM] - handle_create_pi() -  Product ID: 60, Captcha Type: , Txn Counter: 2, IP: ::1
+[05/17/2023 10:14:41 AM] - Page load signature check done!
+[05/17/2023 10:14:41 AM] - Request usage count is valid for this IP addresss. IP: ::1, Request Count: 5
+[05/17/2023 10:14:43 AM] - handle_confirm_pi() -  Product ID: 60, Captcha Type: , Txn Counter: 2, IP: ::1
+[05/17/2023 10:14:43 AM] - Page load signature check done!
+[05/17/2023 10:14:43 AM] - Request usage count is valid for this IP addresss. IP: ::1, Request Count: 6
+[05/17/2023 10:14:47 AM] - Payment processing started.
+[05/17/2023 10:14:47 AM] - Got product ID: 60
+[05/17/2023 10:14:47 AM] - Firing asp_ng_process_ipn_product_item_override filter.
+[05/17/2023 10:14:47 AM] - Firing asp_ng_process_ipn_payment_data_item_override filter.
+[05/17/2023 10:14:49 AM] - The transaction ID of this notification is: ch_3N8hNYFs2jhMsQY11pua9D6B
+[05/17/2023 10:14:49 AM] - Constructing checkout result and order data.
+[05/17/2023 10:14:49 AM] - Firing asp_ng_payment_completed filter.
+[05/17/2023 10:14:49 AM] - Firing asp_ng_payment_completed_update_pi filter.
+[05/17/2023 10:14:49 AM] - Firing asp_stripe_payment_completed action.
+[05/17/2023 10:14:49 AM] - Payment has been processed successfully.
+[05/17/2023 10:14:49 AM] - Redirecting to results page "http://localhost/codeanddesign/contact-us/"
+
+[05/17/2023 10:38:49 AM] - handle_create_pi() -  Product ID: 60, Captcha Type: , Txn Counter: 3, IP: ::1
+[05/17/2023 10:38:49 AM] - Page load signature check done!
+[05/17/2023 10:38:49 AM] - Request usage count is valid for this IP addresss. IP: ::1, Request Count: 7
+[05/17/2023 10:38:52 AM] - handle_confirm_pi() -  Product ID: 60, Captcha Type: , Txn Counter: 3, IP: ::1
+[05/17/2023 10:38:52 AM] - Page load signature check done!
+[05/17/2023 10:38:52 AM] - Request usage count is valid for this IP addresss. IP: ::1, Request Count: 8
+[05/17/2023 10:38:56 AM] - Payment processing started.
+[05/17/2023 10:38:56 AM] - Got product ID: 60
+[05/17/2023 10:38:56 AM] - Firing asp_ng_process_ipn_product_item_override filter.
+[05/17/2023 10:38:56 AM] - Firing asp_ng_process_ipn_payment_data_item_override filter.
+[05/17/2023 10:38:57 AM] - The transaction ID of this notification is: ch_3N8hkuFs2jhMsQY112XTx7SZ
+[05/17/2023 10:38:57 AM] - Constructing checkout result and order data.
+[05/17/2023 10:38:57 AM] - Firing asp_ng_payment_completed filter.
+[05/17/2023 10:38:57 AM] - Firing asp_ng_payment_completed_update_pi filter.
+[05/17/2023 10:38:57 AM] - Firing asp_stripe_payment_completed action.
+[05/17/2023 10:38:57 AM] - Payment has been processed successfully.
+[05/17/2023 10:38:57 AM] - Redirecting to results page "http://localhost/codeanddesign/contact-us/"
+
+[05/17/2023 12:04:16 PM] - handle_create_pi() -  Product ID: 60, Captcha Type: , Txn Counter: 4, IP: ::1
+[05/17/2023 12:04:16 PM] - Page load signature check done!
+[05/17/2023 12:04:16 PM] - Request usage count is valid for this IP addresss. IP: ::1, Request Count: 9
+[05/17/2023 12:04:24 PM] - handle_confirm_pi() -  Product ID: 60, Captcha Type: , Txn Counter: 4, IP: ::1
+[05/17/2023 12:04:24 PM] - Page load signature check done!
+[05/17/2023 12:04:24 PM] - Request usage count is valid for this IP addresss. IP: ::1, Request Count: 10
+[05/17/2023 12:04:27 PM] - Payment processing started.
+[05/17/2023 12:04:27 PM] - Got product ID: 60
+[05/17/2023 12:04:27 PM] - Firing asp_ng_process_ipn_product_item_override filter.
+[05/17/2023 12:04:27 PM] - Firing asp_ng_process_ipn_payment_data_item_override filter.
+[05/17/2023 12:04:27 PM] - The transaction ID of this notification is: ch_3N8j5fFs2jhMsQY11nLCb0FE
+[05/17/2023 12:04:27 PM] - Constructing checkout result and order data.
+[05/17/2023 12:04:27 PM] - Firing asp_ng_payment_completed filter.
+[05/17/2023 12:04:27 PM] - Firing asp_ng_payment_completed_update_pi filter.
+[05/17/2023 12:04:27 PM] - Firing asp_stripe_payment_completed action.
+[05/17/2023 12:04:27 PM] - Payment has been processed successfully.
+[05/17/2023 12:04:27 PM] - Redirecting to results page "http://localhost/codeanddesign/contact-us/"
+
+[05/17/2023 12:05:40 PM] - handle_create_pi() -  Product ID: 60, Captcha Type: , Txn Counter: 5, IP: ::1
+[05/17/2023 12:05:40 PM] - Page load signature check done!
+[05/17/2023 12:05:40 PM] - Request usage count is valid for this IP addresss. IP: ::1, Request Count: 11
+[05/17/2023 12:05:43 PM] - handle_confirm_pi() -  Product ID: 60, Captcha Type: , Txn Counter: 5, IP: ::1
+[05/17/2023 12:05:43 PM] - Page load signature check done!
+[05/17/2023 12:05:43 PM] - Request usage count is valid for this IP addresss. IP: ::1, Request Count: 12
+[05/17/2023 12:05:45 PM] - Payment processing started.
+[05/17/2023 12:05:45 PM] - Got product ID: 60
+[05/17/2023 12:05:45 PM] - Firing asp_ng_process_ipn_product_item_override filter.
+[05/17/2023 12:05:45 PM] - Firing asp_ng_process_ipn_payment_data_item_override filter.
+[05/17/2023 12:05:46 PM] - The transaction ID of this notification is: ch_3N8j6xFs2jhMsQY10xisNvJp
+[05/17/2023 12:05:46 PM] - Constructing checkout result and order data.
+[05/17/2023 12:05:46 PM] - Firing asp_ng_payment_completed filter.
+[05/17/2023 12:05:46 PM] - Firing asp_ng_payment_completed_update_pi filter.
+[05/17/2023 12:05:46 PM] - Firing asp_stripe_payment_completed action.
+[05/17/2023 12:05:46 PM] - Payment has been processed successfully.
+[05/17/2023 12:05:46 PM] - Redirecting to results page "http://localhost/codeanddesign/contact-us/"
+
+[05/17/2023 06:14:30 PM] - handle_create_pi() -  Product ID: 60, Captcha Type: , Txn Counter: 6, IP: ::1
+[05/17/2023 06:14:30 PM] - Page load signature check done!
+[05/17/2023 06:14:30 PM] - Request usage count is valid for this IP addresss. IP: ::1, Request Count: 13
+[05/17/2023 06:14:36 PM] - handle_confirm_pi() -  Product ID: 60, Captcha Type: , Txn Counter: 6, IP: ::1
+[05/17/2023 06:14:36 PM] - Page load signature check done!
+[05/17/2023 06:14:36 PM] - Request usage count is valid for this IP addresss. IP: ::1, Request Count: 14
+[05/17/2023 06:14:41 PM] - Payment processing started.
+[05/17/2023 06:14:41 PM] - Got product ID: 60
+[05/17/2023 06:14:41 PM] - Firing asp_ng_process_ipn_product_item_override filter.
+[05/17/2023 06:14:41 PM] - Firing asp_ng_process_ipn_payment_data_item_override filter.
+[05/17/2023 06:14:42 PM] - The transaction ID of this notification is: ch_3N8ortFs2jhMsQY10nSJKF5R
+[05/17/2023 06:14:42 PM] - Constructing checkout result and order data.
+[05/17/2023 06:14:42 PM] - Firing asp_ng_payment_completed filter.
+[05/17/2023 06:14:42 PM] - Firing asp_ng_payment_completed_update_pi filter.
+[05/17/2023 06:14:43 PM] - Firing asp_stripe_payment_completed action.
+[05/17/2023 06:14:43 PM] - Payment has been processed successfully.
+[05/17/2023 06:14:43 PM] - Redirecting to results page "http://localhost/codeanddesign/contact-us/"
+

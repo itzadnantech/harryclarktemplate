@@ -1,0 +1,19 @@
+Username: admin@harryclark.com
+Password: yHh5eltu(k@EaOB2^V
+Email: itzadnantech@gmail.com
+domain: harryclarktemplate.webxolutions.com
+
+////////////////////////////////
+
+Database Creds
+
+'username' => 'webxiyjk_admin',
+'password' => '3scApyVV9YVYr@T',
+'database' => 'webxiyjk_harryclarktemplate',
+
+
+
+////Ftp
+host : webxolutions.com
+username: harryclarktemplate.webxolutions.com
+password : c.giTCfD7oG]
