@@ -266,7 +266,7 @@ function custom_work_script()
 					$('#forminator-module-7').submit(function(event) {
 						event.preventDefault();
 						event.stopPropagation();
-					 	///Create Url for website
+						///Create Url for website
 						var baseUrl = "https://harryclarktemplate.webxolutions.com/";
 						let ajaxurl = baseUrl + "custom-work/php/quote-form.php";
 
@@ -275,8 +275,10 @@ function custom_work_script()
 						// Validate form fields
 						let isValid = validateForm();
 						if (isValid == true) {
-							$('.forminator-button.forminator-button-submit').prop('disabled', true);
-							$('.forminator-button.forminator-button-submit').text('Loading...');
+							// $('.forminator-button.forminator-button-submit').prop('disabled', true);
+							// $('.forminator-button.forminator-button-submit').text('Loading...');
+							
+							
 							///remove cookies previous
 							Cookies.remove("user_name");
 							Cookies.remove("quote_id");
@@ -292,15 +294,14 @@ function custom_work_script()
 								processData: false,
 								contentType: false,
 								success: function(res) {
-									$('.forminator-button.forminator-button-submit').prop('disabled', false);
-									$('.forminator-button.forminator-button-submit').text('Send Message');
+									// $('.forminator-button.forminator-button-submit').prop('disabled', false);
+									// $('.forminator-button.forminator-button-submit').text('Send Message');
+									
 									switch (res.code) {
 
 										case "success":
 											// Clear the form on successful response
 											$('#forminator-module-7')[0].reset();
-											Cookies.set("user_name", res.data.name);
-											Cookies.set("quote_id", res.data.quote_id);
 
 
 											let name = res.data.name;
@@ -314,8 +315,13 @@ function custom_work_script()
 												buttons: false
 											});
 											setTimeout(function() {
-												window.location.href = stripePopUrl;
-
+												if (res.data.is_driver_license) {
+													Cookies.set("user_name", res.data.name);
+													Cookies.set("quote_id", res.data.quote_id); 
+													window.location.href = stripePopUrl;
+												} else {
+													window.location.reload();
+												}
 											}, 2000);
 											break;
 										case "error":
@@ -391,8 +397,10 @@ function custom_work_script()
 
 
 						if (isValid == true) {
-							$('.forminator-button.forminator-button-submit').prop('disabled', true);
-							$('.forminator-button.forminator-button-submit').text('Loading...');
+							// $('.forminator-button.forminator-button-submit').prop('disabled', true);
+							// $('.forminator-button.forminator-button-submit').text('Loading...');
+
+
 							$.ajax({
 								url: ajaxurl,
 								type: 'POST',
@@ -401,8 +409,10 @@ function custom_work_script()
 								processData: false,
 								contentType: false,
 								success: function(res) {
-									$('.forminator-button.forminator-button-submit').prop('disabled', false);
-									$('.forminator-button.forminator-button-submit').text('Please Submit');
+									// $('.forminator-button.forminator-button-submit').prop('disabled', false);
+									// $('.forminator-button.forminator-button-submit').text('Please Submit');
+
+
 									switch (res.code) {
 										case "success":
 											$('#forminator-module-27')[0].reset();

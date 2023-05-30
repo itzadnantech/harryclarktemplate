@@ -45,15 +45,6 @@ if (isset($_POST) && !empty($_POST)) {
         }
         // Convert the object to an array
         $quote_data = get_object_vars($quote_object);
-        // [quote_id] => 2
-        // [name] => Lacey Sampson
-        // [email] => jodirubyf@mailinator.com
-        // [phone] => +1 (976) 419-1661
-        // [quantity] => 92
-        // [document] => Driver License
-        // [source_lng] => Albanian
-        // [target_lng] => Arabic||Armenian
-        // [notes] => Duis a commodo in et
 
         $targetFolder = ABSPATH . 'custom-work/documents/quote_' . $quote_id;
         if (!file_exists($targetFolder)) {
@@ -128,8 +119,7 @@ function Create_Word_Document($data = array(), $quote_data = array(), $image1Pat
         'height' => 100,
         'setAlignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER, // optional, default is left-aligned
     ]);
-    // echo "ok step 3";
-    // die;
+    
 
 
     // Define the table style
@@ -147,89 +137,129 @@ function Create_Word_Document($data = array(), $quote_data = array(), $image1Pat
     $table = $section->addTable('myTableStyle');
     $section->addTextBreak(1);
 
-    //$table = $section->addTable('My Document', array('size' => 14, 'bold' => true), array('align' => 'right'));
     $table->addRow();
-    $cell = $table->addCell(10000);
-    $cell->addText('Approval number (T200101)', array('bold' => true));
-    $cell->addText('approved by Waka Kotahi to provide translations for driver licensing purposes', array());
-    $table->addCell(5000)->addText('');
+    $c1 = $table->addCell(20000);
+    $c1->addText('Approval number (T200101)', array('bold' => true));
+    $c1->addText('approved by Waka Kotahi to provide translations for driver licensing purposes', array('italic' => true, 'size' => 8));
+    $c2 = $table->addCell(30000);
+    $c2->addText('');
+
+
+    // $table->addRow(); 
+    // $table->addCell(3500)->addText('I certify that this is the correct translation of the original document presented to me');
+    // $table->addCell(1000)->addText('');
+    
+
 
     $table->addRow();
-    $table->addCell(1000)->addText('License number', array('bold' => true));
-    $table->addCell(5000)->addText($data['license_number']);
+    $table->addCell(2000)->addText('Translation reference number', array()); 
+    $table->addCell(3000)->addText('000000-0000');
+
+
+    
 
     $table->addRow();
-    $table->addCell(1000)->addText('Language of document', array('bold' => true));
-    $table->addCell(5000)->addText($quote_data['source_lng']);
+    $table->addCell(2000)->addText('Language of document');
+    $table->addCell(3000)->addText($quote_data['source_lng']);
 
     $table->addRow();
-    $table->addCell(1000)->addText('Type of document', array('bold' => true));
+    $table->addCell(2000)->addText('Type of document');
     $table->addCell(3000)->addText($quote_data['document']);
 
     $table->addRow();
-    $table->addCell(1000)->addText('Licence issuing country', array('bold' => true));
-    $table->addCell(3000)->addText($data['license_issuing_country']);
+    $table->addCell(2000)->addText('License issuing authority and country');
+    $table->addCell(3000)->addText('....');
 
     $table->addRow();
-    $table->addCell(1000)->addText('Licence issuing authority', array('bold' => true));
-    $table->addCell(3000)->addText('');
+    $table->addCell(2000)->addText('License number');
+    $table->addCell(3000)->addText($data['license_number']);
 
     $table->addRow();
-    $table->addCell(2000)->addText('Date licence first obtained', array('bold' => true));
-    $table->addCell(2000)->addText($data['date_license_first_obtained']);
+    $table->addCell(2000)->addText('Date license first obtained');
+    $table->addCell(3000)->addText($data['date_license_first_obtained']);
 
     $table->addRow();
-    $table->addCell(2000)->addText('Date licence card was issued', array('bold' => true));
-    $table->addCell(2000)->addText($data['date_license_card_issued'], array());
+    $table->addCell(2000)->addText('Date license card was issued');
+    $table->addCell(3000)->addText($data['date_license_card_issued']);
+
+
     // Adding new rows to the table...
     $table->addRow();
-    $table->addCell(2000)->addText('Date licence card is due to expire', array('bold' => true));
-    $table->addCell(2000)->addText($data['date_license_card_due_to_expire'], array());
-    $table->addRow();
-    $table->addCell(2000)->addText('Licence class/es held', array('bold' => true));
-    $table->addCell(2000)->addText('');
-    $table->addRow();
-    $table->addCell(2000)->addText('Description of licence class/es', array('bold' => true));
-    $table->addCell(2000)->addText('');
-    $table->addRow();
-    $table->addCell(2000)->addText('Conditions applying to licence', array('bold' => true));
-    $table->addCell(2000)->addText($data['conditions_applying_to_license'], array());
-    $table->addRow();
-    $table->addCell(2000)->addText("Licence holder's Full Name", array('bold' => true));
-    $table->addCell(2000)->addText($data['license_holder_full_name'], array());
-    $table->addRow();
-    $table->addCell(2000)->addText("Licence holder's place of birth", array('bold' => true));
-    $table->addCell(2000)->addText($data['license_holder_place_of_birth'], array());
-    $table->addRow();
-    $table->addCell(2000)->addText("Licence holder's date of birth", array('bold' => true));
-    $table->addCell(2000)->addText($data['license_holder_date_of_birth'], array());
+    $table->addCell(2000)->addText('Date license card is due to expire');
+    $table->addCell(3000)->addText($data['date_license_card_due_to_expire']);
 
     $table->addRow();
-    $table->addCell(2000)->addText("Gender", array('bold' => true));
-    $table->addCell(2000)->addText($data['license_holder_gender'], array());
-    $table->addRow();
-    $table->addCell(2000)->addText('Other relevant licence details', array('bold' => true));
-    $table->addCell(2000)->addText('', array());
-    $table->addRow();
-    $table->addCell(2000)->addText("Translator's additional comments", array('bold' => true));
-    $table->addCell(2000);
-    $table->addRow();
-    $table->addCell(2000)->addText("Translator's name", array('bold' => true));
-    $table->addCell(2000);
-    $table->addRow();
-    $table->addCell(2000)->addText("Translator's signature", array('bold' => true));
-    $table->addCell(2000);
-    $table->addRow();
-    $table->addCell(2000)->addText('Date of translation', array('bold' => true));
-    $table->addCell(2000);
+    $table->addCell(2000)->addText('License class/es held');
+    $table->addCell(3000)->addText('....');
 
-    ///add images
     $table->addRow();
-    $table->addCell(3000)->addText("Document Image one", array('bold' => true));
-    $table->addCell(1000)->addImage($image1Path, array('width' => 150, 'height' => 150));
+    $table->addCell(2000)->addText('Description of license class/es');
+    $table->addCell(3000)->addText('....', array());
+
     $table->addRow();
-    $table->addCell(3000)->addText("Document Image two", array('bold' => true));
-    $table->addCell(1000)->addImage($image2Path, array('width' => 150, 'height' => 150));
+    $table->addCell(2000)->addText('Conditions applying to license');
+    $table->addCell(3000)->addText($data['conditions_applying_to_license']);
+
+    ////License Holder information
+
+    $table->addRow();
+    $table->addCell(2000)->addText("License holder's first name");
+    $table->addCell(3000)->addText($data['license_holder_fname']); 
+
+    $table->addRow();
+    $table->addCell(2000)->addText("License holder's middle name");
+    $table->addCell(3000)->addText($data['license_holder_mname']);
+
+    $table->addRow();
+    $table->addCell(2000)->addText("license holder's last name");
+    $table->addCell(3000)->addText($data['license_holder_lname']);
+
+    $table->addRow();
+    $table->addCell(2000)->addText("License holder's place of birth");
+    $table->addCell(3000)->addText($data['license_holder_place_of_birth']);
+
+    $table->addRow(); 
+    $table->addCell(2000)->addText("License holder's date of birth");
+    $table->addCell(3000)->addText($data['license_holder_date_of_birth']);
+
+    $table->addRow();
+    $table->addCell(2000)->addText("Gender");
+    $table->addCell(3000)->addText($data['license_holder_gender']);
+
+
+    $table->addRow();
+    $table->addCell(2000)->addText('Other relevant license details');
+    $table->addCell(3000)->addText('....',);
+
+
+    ///office use
+
+    $table->addRow();
+    $table->addCell(2000)->addText("Translator's additional comments");
+    $table->addCell(3000)->addText('....');
+
+
+    $table->addRow();
+    $table->addCell(2000)->addText("Translator's name");
+    $table->addCell(3000)->addText('Hadi Abu Ghazala');
+    
+    
+    $table->addRow();
+    $table->addCell(2000)->addText("Translator's signature");
+    $table->addCell(3000);
+
+    $table->addRow();
+    $table->addCell(2000)->addText('Date of translation');
+    $table->addCell(3000)->addText(date('Y-m-d'));
+
+    $section = $phpWord->addSection();
+
+    // add image to section
+    $section->addImage('../logo.png', [
+        'width' => 450,
+        'height' => 100,
+        'setAlignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER, // optional, default is left-aligned
+    ]);
 
 
 
@@ -247,44 +277,47 @@ function Create_Word_Document($data = array(), $quote_data = array(), $image1Pat
 
     try {
         $objWriter->save($filePath);
+        echo "saved";
+        die;
         return true;
     } catch (\PhpOffice\PhpWord\Exception\Exception $e) {
         echo "Error saving the file: " . $e->getMessage();
+        die;
         return false;
     }
 }
 
 
- 
+
 function Send_an_Email()
 {
     // Instantiate PHPMailer
     $mail = new PHPMailer(true);
 
     // Set mailer to use SMTP
-    $mail->isSMTP(); 
-    $mail->SMTPDebug = 0;    
-    $mail->Host = 'smtp.gmail.com'; 
-    $mail->SMTPAuth = true; 
-    $mail->Port = 587;  
+    $mail->isSMTP();
+    $mail->SMTPDebug = 0;
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Port = 587;
 
     // Set your Gmail username and password
     $mail->Username = 'itzadnantech@gmail.com';
-    $mail->Password = 'nyhosiqejbkacdjz'; 
+    $mail->Password = 'nyhosiqejbkacdjz';
     $mail->setFrom('itzadnantech@gmail.com', 'Adnan Hussain');
 
-     
+
 
     $mail->addAddress('cto@agato.net', 'CTO Agato');
     $mail->Subject = 'Quotation Email';
     $mail->Body = 'A new order has arrived.';
-    $mail->isHTML(true); 
+    $mail->isHTML(true);
     $wordDocumentPath = '../myDocument.docx';
     $mail->addAttachment($wordDocumentPath, 'myDocument.docx');
     try {
-        $mail->send(); 
+        $mail->send();
         return true;
-    } catch (Exception $e) { 
+    } catch (Exception $e) {
         return false;
     }
 }

@@ -1,14 +1,10 @@
 <?php
 require_once  '../../wp-load.php';
-require_once  ABSPATH . 'vendor/autoload.php';
 
-//email files are here 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
 // Check if form data is submitted
 if (isset($_POST) && !empty($_POST)) {
-    
-    
+
+
 
     extract($_POST);
     $data =  array();
@@ -20,6 +16,11 @@ if (isset($_POST) && !empty($_POST)) {
     $data['document'] = implode('||', $_POST['select-1']);
     $data['source_lng'] = $_POST['select-2'];
     $data['target_lng'] = implode('||', $_POST['select-3']);
+
+
+   
+
+   
 
 
 
@@ -55,13 +56,18 @@ if (isset($_POST) && !empty($_POST)) {
                     }
                 }
             }
+        } 
+
+        $word = "Driver License";
+        $data['is_driver_license'] = false;
+        if (preg_match("/\b$word\b/i", $data['document'])) { 
+            $data['is_driver_license'] = true;
         }
 
-
+        
         ///response is all ok 
         $data = array('code' => "success", 'data' => $data);
         echo json_encode($data);
         die;
     }
 }
- 
