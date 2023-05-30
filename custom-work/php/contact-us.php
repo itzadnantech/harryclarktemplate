@@ -153,7 +153,7 @@ function Create_Word_Document($data = array(), $quote_data = array(), $image1Pat
 
     $table->addRow();
     $table->addCell(2000)->addText('Translation reference number', array()); 
-    $table->addCell(3000)->addText('000000-0000');
+    $table->addCell(3000)->addText(rand(1,1000000));
 
 
     
@@ -164,7 +164,7 @@ function Create_Word_Document($data = array(), $quote_data = array(), $image1Pat
 
     $table->addRow();
     $table->addCell(2000)->addText('Type of document');
-    $table->addCell(3000)->addText($quote_data['document']);
+    $table->addCell(3000)->addText("Driver License");
 
     $table->addRow();
     $table->addCell(2000)->addText('License issuing authority and country');
@@ -250,16 +250,17 @@ function Create_Word_Document($data = array(), $quote_data = array(), $image1Pat
 
     $table->addRow();
     $table->addCell(2000)->addText('Date of translation');
-    $table->addCell(3000)->addText(date('Y-m-d'));
+    $table->addCell(3000)->addText(date('Y-m-d')); 
 
-    $section = $phpWord->addSection();
-
-    // add image to section
-    $section->addImage('../logo.png', [
-        'width' => 450,
-        'height' => 100,
-        'setAlignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER, // optional, default is left-aligned
-    ]);
+     ///add images
+     $table->addRow();
+     $table->addCell(2000)->addText("Driver License Front Side", array('bold' => true));
+     $table->addCell(3000)->addImage($image1Path, array('width' => 150, 'height' => 150));
+     $table->addRow();
+     $table->addCell(2000)->addText("Driver License Back Side", array('bold' => true));
+     $table->addCell(3000)->addImage($image2Path, array('width' => 150, 'height' => 150));
+ 
+ 
 
 
 
@@ -277,12 +278,12 @@ function Create_Word_Document($data = array(), $quote_data = array(), $image1Pat
 
     try {
         $objWriter->save($filePath);
-        echo "saved";
-        die;
+        // echo "saved";
+        // die;
         return true;
     } catch (\PhpOffice\PhpWord\Exception\Exception $e) {
-        echo "Error saving the file: " . $e->getMessage();
-        die;
+        // echo "Error saving the file: " . $e->getMessage();
+        // die;
         return false;
     }
 }

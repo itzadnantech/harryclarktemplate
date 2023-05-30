@@ -275,8 +275,8 @@ function custom_work_script()
 						// Validate form fields
 						let isValid = validateForm();
 						if (isValid == true) {
-							// $('.forminator-button.forminator-button-submit').prop('disabled', true);
-							// $('.forminator-button.forminator-button-submit').text('Loading...');
+							$('.forminator-button.forminator-button-submit').prop('disabled', true);
+							$('.forminator-button.forminator-button-submit').text('Loading...');
 							
 							
 							///remove cookies previous
@@ -294,8 +294,8 @@ function custom_work_script()
 								processData: false,
 								contentType: false,
 								success: function(res) {
-									// $('.forminator-button.forminator-button-submit').prop('disabled', false);
-									// $('.forminator-button.forminator-button-submit').text('Send Message');
+									$('.forminator-button.forminator-button-submit').prop('disabled', false);
+									$('.forminator-button.forminator-button-submit').text('Send Message');
 									
 									switch (res.code) {
 
@@ -397,8 +397,8 @@ function custom_work_script()
 
 
 						if (isValid == true) {
-							// $('.forminator-button.forminator-button-submit').prop('disabled', true);
-							// $('.forminator-button.forminator-button-submit').text('Loading...');
+							$('.forminator-button.forminator-button-submit').prop('disabled', true);
+							$('.forminator-button.forminator-button-submit').text('Loading...');
 
 
 							$.ajax({
@@ -409,8 +409,8 @@ function custom_work_script()
 								processData: false,
 								contentType: false,
 								success: function(res) {
-									// $('.forminator-button.forminator-button-submit').prop('disabled', false);
-									// $('.forminator-button.forminator-button-submit').text('Please Submit');
+									$('.forminator-button.forminator-button-submit').prop('disabled', false);
+									$('.forminator-button.forminator-button-submit').text('Please Submit');
 
 
 									switch (res.code) {
